@@ -1,0 +1,629 @@
+pFUSE library version: 2.8.6
+unique: 1, opcode: INIT (26), nodeid: 0, insize: 56
+INIT: 7.17
+flags=0x0000047b
+max_readahead=0x00020000
+   INIT: 7.12
+   flags=0x00000000
+   max_readahead=0x00020000
+   max_write=0x00020000
+   unique: 1, success, outsize: 40
+unique: 2, opcode: OPENDIR (27), nodeid: 1, insize: 48
+   unique: 2, success, outsize: 32
+unique: 3, opcode: LOOKUP (1), nodeid: 1, insize: 47
+
+[[[[[[    fuseserver_lookup     ]]]]]]
+
+   unique: 3, error: -2 (No such file or directory), outsize: 16
+unique: 4, opcode: LOOKUP (1), nodeid: 1, insize: 57
+
+[[[[[[    fuseserver_lookup     ]]]]]]
+
+   unique: 4, error: -2 (No such file or directory), outsize: 16
+unique: 5, opcode: LOOKUP (1), nodeid: 1, insize: 52
+
+[[[[[[    fuseserver_lookup     ]]]]]]
+
+   unique: 5, error: -2 (No such file or directory), outsize: 16
+unique: 6, opcode: READDIR (28), nodeid: 1, insize: 80
+
+[[[[[[    fuseserver_readdir     ]]]]]]
+
+fuseserver_readdir
+   unique: 6, success, outsize: 16
+unique: 7, opcode: LOOKUP (1), nodeid: 1, insize: 52
+
+[[[[[[    fuseserver_lookup     ]]]]]]
+
+   unique: 7, error: -2 (No such file or directory), outsize: 16
+unique: 8, opcode: RELEASEDIR (29), nodeid: 1, insize: 64
+   unique: 8, success, outsize: 16
+unique: 9, opcode: OPENDIR (27), nodeid: 1, insize: 48
+   unique: 9, success, outsize: 32
+unique: 10, opcode: READDIR (28), nodeid: 1, insize: 80
+
+[[[[[[    fuseserver_readdir     ]]]]]]
+
+fuseserver_readdir
+   unique: 10, success, outsize: 16
+unique: 11, opcode: RELEASEDIR (29), nodeid: 1, insize: 64
+   unique: 11, success, outsize: 16
+unique: 12, opcode: OPENDIR (27), nodeid: 1, insize: 48
+   unique: 12, success, outsize: 32
+unique: 13, opcode: READDIR (28), nodeid: 1, insize: 80
+
+[[[[[[    fuseserver_readdir     ]]]]]]
+
+fuseserver_readdir
+   unique: 13, success, outsize: 16
+unique: 14, opcode: RELEASEDIR (29), nodeid: 1, insize: 64
+   unique: 14, success, outsize: 16
+unique: 15, opcode: OPENDIR (27), nodeid: 1, insize: 48
+   unique: 15, success, outsize: 32
+unique: 16, opcode: READDIR (28), nodeid: 1, insize: 80
+
+[[[[[[    fuseserver_readdir     ]]]]]]
+
+fuseserver_readdir
+   unique: 16, success, outsize: 16
+unique: 17, opcode: RELEASEDIR (29), nodeid: 1, insize: 64
+   unique: 17, success, outsize: 16
+unique: 18, opcode: OPENDIR (27), nodeid: 1, insize: 48
+   unique: 18, success, outsize: 32
+unique: 19, opcode: READDIR (28), nodeid: 1, insize: 80
+
+[[[[[[    fuseserver_readdir     ]]]]]]
+
+fuseserver_readdir
+   unique: 19, success, outsize: 16
+unique: 20, opcode: RELEASEDIR (29), nodeid: 1, insize: 64
+   unique: 20, success, outsize: 16
+unique: 21, opcode: OPENDIR (27), nodeid: 1, insize: 48
+   unique: 21, success, outsize: 32
+unique: 22, opcode: READDIR (28), nodeid: 1, insize: 80
+
+[[[[[[    fuseserver_readdir     ]]]]]]
+
+fuseserver_readdir
+   unique: 22, success, outsize: 16
+unique: 23, opcode: RELEASEDIR (29), nodeid: 1, insize: 64
+   unique: 23, success, outsize: 16
+unique: 24, opcode: OPENDIR (27), nodeid: 1, insize: 48
+   unique: 24, success, outsize: 32
+unique: 25, opcode: READDIR (28), nodeid: 1, insize: 80
+
+[[[[[[    fuseserver_readdir     ]]]]]]
+
+fuseserver_readdir
+   unique: 25, success, outsize: 16
+unique: 26, opcode: RELEASEDIR (29), nodeid: 1, insize: 64
+   unique: 26, success, outsize: 16
+unique: 27, opcode: OPENDIR (27), nodeid: 1, insize: 48
+   unique: 27, success, outsize: 32
+unique: 28, opcode: READDIR (28), nodeid: 1, insize: 80
+
+[[[[[[    fuseserver_readdir     ]]]]]]
+
+fuseserver_readdir
+   unique: 28, success, outsize: 16
+unique: 29, opcode: RELEASEDIR (29), nodeid: 1, insize: 64
+   unique: 29, success, outsize: 16
+unique: 30, opcode: OPENDIR (27), nodeid: 1, insize: 48
+   unique: 30, success, outsize: 32
+unique: 31, opcode: READDIR (28), nodeid: 1, insize: 80
+
+[[[[[[    fuseserver_readdir     ]]]]]]
+
+fuseserver_readdir
+   unique: 31, success, outsize: 16
+unique: 32, opcode: RELEASEDIR (29), nodeid: 1, insize: 64
+   unique: 32, success, outsize: 16
+unique: 33, opcode: OPENDIR (27), nodeid: 1, insize: 48
+   unique: 33, success, outsize: 32
+unique: 34, opcode: READDIR (28), nodeid: 1, insize: 80
+
+[[[[[[    fuseserver_readdir     ]]]]]]
+
+fuseserver_readdir
+   unique: 34, success, outsize: 16
+unique: 35, opcode: RELEASEDIR (29), nodeid: 1, insize: 64
+   unique: 35, success, outsize: 16
+unique: 36, opcode: OPENDIR (27), nodeid: 1, insize: 48
+   unique: 36, success, outsize: 32
+unique: 37, opcode: READDIR (28), nodeid: 1, insize: 80
+
+[[[[[[    fuseserver_readdir     ]]]]]]
+
+fuseserver_readdir
+   unique: 37, success, outsize: 16
+unique: 38, opcode: RELEASEDIR (29), nodeid: 1, insize: 64
+   unique: 38, success, outsize: 16
+unique: 39, opcode: OPENDIR (27), nodeid: 1, insize: 48
+   unique: 39, success, outsize: 32
+unique: 40, opcode: READDIR (28), nodeid: 1, insize: 80
+
+[[[[[[    fuseserver_readdir     ]]]]]]
+
+fuseserver_readdir
+   unique: 40, success, outsize: 16
+unique: 41, opcode: RELEASEDIR (29), nodeid: 1, insize: 64
+   unique: 41, success, outsize: 16
+unique: 42, opcode: OPENDIR (27), nodeid: 1, insize: 48
+   unique: 42, success, outsize: 32
+unique: 43, opcode: READDIR (28), nodeid: 1, insize: 80
+
+[[[[[[    fuseserver_readdir     ]]]]]]
+
+fuseserver_readdir
+   unique: 43, success, outsize: 16
+unique: 44, opcode: RELEASEDIR (29), nodeid: 1, insize: 64
+   unique: 44, success, outsize: 16
+unique: 45, opcode: OPENDIR (27), nodeid: 1, insize: 48
+   unique: 45, success, outsize: 32
+unique: 46, opcode: READDIR (28), nodeid: 1, insize: 80
+
+[[[[[[    fuseserver_readdir     ]]]]]]
+
+fuseserver_readdir
+   unique: 46, success, outsize: 16
+unique: 47, opcode: RELEASEDIR (29), nodeid: 1, insize: 64
+   unique: 47, success, outsize: 16
+unique: 48, opcode: OPENDIR (27), nodeid: 1, insize: 48
+   unique: 48, success, outsize: 32
+unique: 49, opcode: READDIR (28), nodeid: 1, insize: 80
+
+[[[[[[    fuseserver_readdir     ]]]]]]
+
+fuseserver_readdir
+   unique: 49, success, outsize: 16
+unique: 50, opcode: RELEASEDIR (29), nodeid: 1, insize: 64
+   unique: 50, success, outsize: 16
+unique: 51, opcode: OPENDIR (27), nodeid: 1, insize: 48
+   unique: 51, success, outsize: 32
+unique: 52, opcode: READDIR (28), nodeid: 1, insize: 80
+
+[[[[[[    fuseserver_readdir     ]]]]]]
+
+fuseserver_readdir
+   unique: 52, success, outsize: 16
+unique: 53, opcode: RELEASEDIR (29), nodeid: 1, insize: 64
+   unique: 53, success, outsize: 16
+unique: 54, opcode: OPENDIR (27), nodeid: 1, insize: 48
+   unique: 54, success, outsize: 32
+unique: 55, opcode: READDIR (28), nodeid: 1, insize: 80
+
+[[[[[[    fuseserver_readdir     ]]]]]]
+
+fuseserver_readdir
+   unique: 55, success, outsize: 16
+unique: 56, opcode: RELEASEDIR (29), nodeid: 1, insize: 64
+   unique: 56, success, outsize: 16
+unique: 57, opcode: OPENDIR (27), nodeid: 1, insize: 48
+   unique: 57, success, outsize: 32
+unique: 58, opcode: READDIR (28), nodeid: 1, insize: 80
+
+[[[[[[    fuseserver_readdir     ]]]]]]
+
+fuseserver_readdir
+   unique: 58, success, outsize: 16
+unique: 59, opcode: RELEASEDIR (29), nodeid: 1, insize: 64
+   unique: 59, success, outsize: 16
+unique: 60, opcode: OPENDIR (27), nodeid: 1, insize: 48
+   unique: 60, success, outsize: 32
+unique: 61, opcode: READDIR (28), nodeid: 1, insize: 80
+
+[[[[[[    fuseserver_readdir     ]]]]]]
+
+fuseserver_readdir
+   unique: 61, success, outsize: 16
+unique: 62, opcode: RELEASEDIR (29), nodeid: 1, insize: 64
+   unique: 62, success, outsize: 16
+unique: 63, opcode: OPENDIR (27), nodeid: 1, insize: 48
+   unique: 63, success, outsize: 32
+unique: 64, opcode: READDIR (28), nodeid: 1, insize: 80
+
+[[[[[[    fuseserver_readdir     ]]]]]]
+
+fuseserver_readdir
+   unique: 64, success, outsize: 16
+unique: 65, opcode: RELEASEDIR (29), nodeid: 1, insize: 64
+   unique: 65, success, outsize: 16
+unique: 66, opcode: OPENDIR (27), nodeid: 1, insize: 48
+   unique: 66, success, outsize: 32
+unique: 67, opcode: READDIR (28), nodeid: 1, insize: 80
+
+[[[[[[    fuseserver_readdir     ]]]]]]
+
+fuseserver_readdir
+   unique: 67, success, outsize: 16
+unique: 68, opcode: RELEASEDIR (29), nodeid: 1, insize: 64
+   unique: 68, success, outsize: 16
+unique: 69, opcode: LOOKUP (1), nodeid: 1, insize: 52
+
+[[[[[[    fuseserver_lookup     ]]]]]]
+
+   unique: 69, error: -2 (No such file or directory), outsize: 16
+unique: 70, opcode: LOOKUP (1), nodeid: 1, insize: 46
+
+[[[[[[    fuseserver_lookup     ]]]]]]
+
+   unique: 70, error: -2 (No such file or directory), outsize: 16
+unique: 71, opcode: MKDIR (9), nodeid: 1, insize: 54
+
+[[[[[[    fuseserver_mkdir     ]]]]]]
+
+
+[[[[[[    create_inum       ]]]]]]
+
+ino : 858590250 
+eid : 858590250 
+
+
+[[[[[[    getattr     ]]]]]]
+
+getattr 00000000332d0c2a 0
+getdir 00000000332d0c2a
+   getattr -> 576924 576924 576924
+   unique: 71, success, outsize: 144
+unique: 72, opcode: LOOKUP (1), nodeid: 1, insize: 46
+
+[[[[[[    fuseserver_lookup     ]]]]]]
+
+
+[[[[[[    getattr     ]]]]]]
+
+getattr 00000000332d0c2a 0
+getdir 00000000332d0c2a
+   getattr -> 576924 576924 576924
+   unique: 72, success, outsize: 144
+unique: 73, opcode: LOOKUP (1), nodeid: 858590250, insize: 44
+
+[[[[[[    fuseserver_lookup     ]]]]]]
+
+   unique: 73, error: -2 (No such file or directory), outsize: 16
+unique: 74, opcode: CREATE (35), nodeid: 858590250, insize: 60
+
+[[[[[[    fuseserver_create     ]]]]]]
+
+
+[[[[[[    fuseserver_createhelper     ]]]]]]
+
+
+[[[[[[    create_inum       ]]]]]]
+
+ino : -1474204463 
+eid : -1474204463 
+
+
+[[[[[[    getattr     ]]]]]]
+
+getattr 00000000a8216cd1 1
+getfile 00000000a8216cd1
+getfile 00000000a8216cd1 -> sz 0
+   getattr -> 0
+   unique: 74, success, outsize: 160
+unique: 75, opcode: IOCTL (39), nodeid: 2820762833, insize: 72
+   unique: 75, error: -38 (Function not implemented), outsize: 16
+unique: 76, opcode: GETATTR (3), nodeid: 2820762833, insize: 56
+
+[[[[[[    fuseserver_getattr     ]]]]]]
+
+
+[[[[[[    getattr     ]]]]]]
+
+getattr 00000000a8216cd1 1
+getfile 00000000a8216cd1
+getfile 00000000a8216cd1 -> sz 0
+   getattr -> 0
+   unique: 76, success, outsize: 120
+unique: 77, opcode: GETXATTR (22), nodeid: 2820762833, insize: 68
+   unique: 77, error: -38 (Function not implemented), outsize: 16
+unique: 78, opcode: WRITE (16), nodeid: 2820762833, insize: 97
+
+[[[[[[    fuseserver_write     ]]]]]]
+
+   unique: 78, success, outsize: 24
+unique: 79, opcode: FLUSH (25), nodeid: 2820762833, insize: 64
+   unique: 79, error: -38 (Function not implemented), outsize: 16
+unique: 80, opcode: RELEASE (18), nodeid: 2820762833, insize: 64
+   unique: 80, success, outsize: 16
+unique: 81, opcode: LOOKUP (1), nodeid: 1, insize: 46
+
+[[[[[[    fuseserver_lookup     ]]]]]]
+
+
+[[[[[[    getattr     ]]]]]]
+
+getattr 00000000332d0c2a 0
+getdir 00000000332d0c2a
+   getattr -> 579721 581627 581627
+   unique: 81, success, outsize: 144
+unique: 82, opcode: LOOKUP (1), nodeid: 858590250, insize: 44
+
+[[[[[[    fuseserver_lookup     ]]]]]]
+
+
+[[[[[[    getattr     ]]]]]]
+
+getattr 00000000a8216cd1 1
+getfile 00000000a8216cd1
+getfile 00000000a8216cd1 -> sz 17
+   getattr -> 17
+   unique: 82, success, outsize: 144
+unique: 83, opcode: UNLINK (10), nodeid: 858590250, insize: 44
+
+[[[[[[    fuseserver_unlink     ]]]]]]
+
+   unique: 83, success, outsize: 16
+unique: 84, opcode: FORGET (2), nodeid: 2820762833, insize: 48
+unique: 85, opcode: LOOKUP (1), nodeid: 1, insize: 46
+
+[[[[[[    fuseserver_lookup     ]]]]]]
+
+
+[[[[[[    getattr     ]]]]]]
+
+getattr 00000000332d0c2a 0
+getdir 00000000332d0c2a
+   getattr -> 584621 585457 585457
+   unique: 85, success, outsize: 144
+unique: 86, opcode: LOOKUP (1), nodeid: 858590250, insize: 44
+
+[[[[[[    fuseserver_lookup     ]]]]]]
+
+   unique: 86, error: -2 (No such file or directory), outsize: 16
+unique: 87, opcode: CREATE (35), nodeid: 858590250, insize: 60
+
+[[[[[[    fuseserver_create     ]]]]]]
+
+
+[[[[[[    fuseserver_createhelper     ]]]]]]
+
+
+[[[[[[    create_inum       ]]]]]]
+
+ino : -1283638043 
+eid : -1283638043 
+
+
+[[[[[[    getattr     ]]]]]]
+
+getattr 00000000b37d3ce5 1
+getfile 00000000b37d3ce5
+getfile 00000000b37d3ce5 -> sz 0
+   getattr -> 0
+   unique: 87, success, outsize: 160
+unique: 88, opcode: IOCTL (39), nodeid: 3011329253, insize: 72
+   unique: 88, error: -38 (Function not implemented), outsize: 16
+unique: 89, opcode: GETATTR (3), nodeid: 3011329253, insize: 56
+
+[[[[[[    fuseserver_getattr     ]]]]]]
+
+
+[[[[[[    getattr     ]]]]]]
+
+getattr 00000000b37d3ce5 1
+getfile 00000000b37d3ce5
+getfile 00000000b37d3ce5 -> sz 0
+   getattr -> 0
+   unique: 89, success, outsize: 120
+unique: 90, opcode: WRITE (16), nodeid: 3011329253, insize: 97
+
+[[[[[[    fuseserver_write     ]]]]]]
+
+   unique: 90, success, outsize: 24
+unique: 91, opcode: RELEASE (18), nodeid: 3011329253, insize: 64
+   unique: 91, success, outsize: 16
+unique: 92, opcode: LOOKUP (1), nodeid: 1, insize: 46
+
+[[[[[[    fuseserver_lookup     ]]]]]]
+
+
+[[[[[[    getattr     ]]]]]]
+
+getattr 00000000332d0c2a 0
+getdir 00000000332d0c2a
+   getattr -> 587093 589094 589094
+   unique: 92, success, outsize: 144
+unique: 93, opcode: LOOKUP (1), nodeid: 858590250, insize: 44
+
+[[[[[[    fuseserver_lookup     ]]]]]]
+
+
+[[[[[[    getattr     ]]]]]]
+
+getattr 00000000b37d3ce5 1
+getfile 00000000b37d3ce5
+getfile 00000000b37d3ce5 -> sz 17
+   getattr -> 17
+   unique: 93, success, outsize: 144
+unique: 94, opcode: GETATTR (3), nodeid: 3011329253, insize: 56
+
+[[[[[[    fuseserver_getattr     ]]]]]]
+
+
+[[[[[[    getattr     ]]]]]]
+
+getattr 00000000b37d3ce5 1
+getfile 00000000b37d3ce5
+getfile 00000000b37d3ce5 -> sz 17
+   getattr -> 17
+   unique: 94, success, outsize: 120
+unique: 95, opcode: LOOKUP (1), nodeid: 1, insize: 46
+
+[[[[[[    fuseserver_lookup     ]]]]]]
+
+
+[[[[[[    getattr     ]]]]]]
+
+getattr 00000000332d0c2a 0
+getdir 00000000332d0c2a
+   getattr -> 591141 589094 589094
+   unique: 95, success, outsize: 144
+unique: 96, opcode: LOOKUP (1), nodeid: 858590250, insize: 44
+
+[[[[[[    fuseserver_lookup     ]]]]]]
+
+
+[[[[[[    getattr     ]]]]]]
+
+getattr 00000000b37d3ce5 1
+getfile 00000000b37d3ce5
+getfile 00000000b37d3ce5 -> sz 17
+   getattr -> 17
+   unique: 96, success, outsize: 144
+unique: 97, opcode: OPEN (14), nodeid: 3011329253, insize: 48
+   unique: 97, success, outsize: 32
+unique: 98, opcode: SETATTR (4), nodeid: 3011329253, insize: 128
+
+[[[[[[    fuseserver_setattr     ]]]]]]
+
+fuseserver_setattr 0x8
+   fuseserver_setattr set size to 0
+
+[[[[[[    getattr     ]]]]]]
+
+getattr 00000000b37d3ce5 1
+getfile 00000000b37d3ce5
+getfile 00000000b37d3ce5 -> sz 17
+   getattr -> 17
+
+[[[[[[    getattr     ]]]]]]
+
+getattr 00000000b37d3ce5 1
+getfile 00000000b37d3ce5
+getfile 00000000b37d3ce5 -> sz 17
+   getattr -> 17
+   unique: 98, success, outsize: 120
+unique: 99, opcode: IOCTL (39), nodeid: 3011329253, insize: 72
+   unique: 99, error: -38 (Function not implemented), outsize: 16
+unique: 100, opcode: GETATTR (3), nodeid: 3011329253, insize: 56
+
+[[[[[[    fuseserver_getattr     ]]]]]]
+
+
+[[[[[[    getattr     ]]]]]]
+
+getattr 00000000b37d3ce5 1
+getfile 00000000b37d3ce5
+getfile 00000000b37d3ce5 -> sz 17
+   getattr -> 17
+   unique: 100, success, outsize: 120
+unique: 101, opcode: LOOKUP (1), nodeid: 1, insize: 46
+
+[[[[[[    fuseserver_lookup     ]]]]]]
+
+
+[[[[[[    getattr     ]]]]]]
+
+getattr 00000000332d0c2a 0
+getdir 00000000332d0c2a
+   getattr -> 593691 589094 589094
+   unique: 101, success, outsize: 144
+unique: 102, opcode: LOOKUP (1), nodeid: 858590250, insize: 44
+
+[[[[[[    fuseserver_lookup     ]]]]]]
+
+
+[[[[[[    getattr     ]]]]]]
+
+getattr 00000000b37d3ce5 1
+getfile 00000000b37d3ce5
+getfile 00000000b37d3ce5 -> sz 17
+   getattr -> 17
+   unique: 102, success, outsize: 144
+unique: 103, opcode: GETATTR (3), nodeid: 3011329253, insize: 56
+
+[[[[[[    fuseserver_getattr     ]]]]]]
+
+
+[[[[[[    getattr     ]]]]]]
+
+getattr 00000000b37d3ce5 1
+getfile 00000000b37d3ce5
+getfile 00000000b37d3ce5 -> sz 17
+   getattr -> 17
+   unique: 103, success, outsize: 120
+unique: 104, opcode: WRITE (16), nodeid: 3011329253, insize: 97
+
+[[[[[[    fuseserver_write     ]]]]]]
+
+   unique: 104, success, outsize: 24
+unique: 105, opcode: RELEASE (18), nodeid: 3011329253, insize: 64
+   unique: 105, success, outsize: 16
+unique: 106, opcode: LOOKUP (1), nodeid: 1, insize: 46
+
+[[[[[[    fuseserver_lookup     ]]]]]]
+
+
+[[[[[[    getattr     ]]]]]]
+
+getattr 00000000332d0c2a 0
+getdir 00000000332d0c2a
+   getattr -> 597853 589094 589094
+   unique: 106, success, outsize: 144
+unique: 107, opcode: LOOKUP (1), nodeid: 858590250, insize: 44
+
+[[[[[[    fuseserver_lookup     ]]]]]]
+
+
+[[[[[[    getattr     ]]]]]]
+
+getattr 00000000b37d3ce5 1
+getfile 00000000b37d3ce5
+getfile 00000000b37d3ce5 -> sz 17
+   getattr -> 17
+   unique: 107, success, outsize: 144
+unique: 108, opcode: OPEN (14), nodeid: 3011329253, insize: 48
+   unique: 108, success, outsize: 32
+unique: 109, opcode: IOCTL (39), nodeid: 3011329253, insize: 72
+   unique: 109, error: -38 (Function not implemented), outsize: 16
+unique: 110, opcode: GETATTR (3), nodeid: 3011329253, insize: 56
+
+[[[[[[    fuseserver_getattr     ]]]]]]
+
+
+[[[[[[    getattr     ]]]]]]
+
+getattr 00000000b37d3ce5 1
+getfile 00000000b37d3ce5
+getfile 00000000b37d3ce5 -> sz 17
+   getattr -> 17
+   unique: 110, success, outsize: 120
+unique: 111, opcode: RELEASE (18), nodeid: 3011329253, insize: 64
+   unique: 111, success, outsize: 16
+unique: 112, opcode: LOOKUP (1), nodeid: 1, insize: 46
+
+[[[[[[    fuseserver_lookup     ]]]]]]
+
+
+[[[[[[    getattr     ]]]]]]
+
+getattr 00000000332d0c2a 0
+getdir 00000000332d0c2a
+   getattr -> 601321 589094 589094
+   unique: 112, success, outsize: 144
+unique: 113, opcode: LOOKUP (1), nodeid: 858590250, insize: 44
+
+[[[[[[    fuseserver_lookup     ]]]]]]
+
+
+[[[[[[    getattr     ]]]]]]
+
+getattr 00000000b37d3ce5 1
+getfile 00000000b37d3ce5
+getfile 00000000b37d3ce5 -> sz 17
+   getattr -> 17
+   unique: 113, success, outsize: 144
+unique: 114, opcode: GETATTR (3), nodeid: 3011329253, insize: 56
+
+[[[[[[    fuseserver_getattr     ]]]]]]
+
+
+[[[[[[    getattr     ]]]]]]
+
+getattr 00000000b37d3ce5 1
+getfile 00000000b37d3ce5
+getfile 00000000b37d3ce5 -> sz 17
+   getattr -> 17
+   unique: 114, success, outsize: 120

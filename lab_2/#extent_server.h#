@@ -1,0 +1,33 @@
+// this is the extent server
+
+#ifndef extent_server_h
+#define extent_server_h
+
+#include <string>
+#include <map>
+#include "extent_protocol.h"
+
+using namespace std;
+
+class extent_server {
+ private:
+  map<extent_protocol::extentid_t, std::string> extent_map;
+  map<extent_protocol::extentid_t, extent_protocol::attr> extent_attr_map;
+  
+ public:
+  extent_server();
+
+  int put(extent_protocol::extentid_t id, std::string, int &);
+  int get(extent_protocol::extentid_t id, std::string &);
+  int getattr(extent_protocol::extentid_t id, extent_protocol::attr &);
+  int remove(extent_protocol::extentid_t id, int &);
+};
+
+#endif 
+
+
+
+
+
+
+
