@@ -7,7 +7,6 @@
 #include "paxos_protocol.h"
 #include "log.h"
 
-#include <fstream>
 using namespace std;
 
 class paxos_change {
@@ -45,7 +44,7 @@ class acceptor {
  public:
   acceptor(class paxos_change *cfg, bool _first, std::string _me, 
 	std::string _value);
-  ~acceptor();
+  ~acceptor(){}
   void commit(unsigned instance, std::string v);
   unsigned instance() { return instance_h; }
   std::string value(unsigned instance) { return values[instance]; }
@@ -54,9 +53,6 @@ class acceptor {
   rpcs *get_rpcs() { return pxs; };
   prop_t get_n_h() { return n_h; };
   unsigned get_instance_h() { return instance_h; };
-  ofstream file;
-
-  
 };
 
 extern bool isamember(std::string m, const std::vector<std::string> &nodes);
@@ -93,12 +89,10 @@ class proposer {
   friend class log;
  public:
   proposer(class paxos_change *cfg, class acceptor *_acceptor, std::string _me);
-  ~proposer();
+  ~proposer(){}
   bool run(int instance, std::vector<std::string> cnodes, std::string v);
   bool isrunning();
   void breakpoint(int b);
-
-  ofstream file;
 };
 
 

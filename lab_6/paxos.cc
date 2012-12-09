@@ -71,15 +71,6 @@ proposer::majority(const std::vector<std::string> &l1,
       n++;
   }
 
-  //test
-  file << "member: [";
-  for(unsigned i=0; i<l1.size(); i++)
-    file << l1[i] << ", ";
-  file << "] , accepter: [";
-  for(unsigned i=0; i<l2.size(); i++)
-    file << l2[i] << ", ";
-  file << "]\n";
-
   return n >= (l1.size() >> 1) + 1;
 }
 
@@ -91,13 +82,6 @@ proposer::proposer(class paxos_change *_cfg, class acceptor *_acceptor,
   VERIFY (pthread_mutex_init(&pxs_mutex, NULL) == 0);
   my_n.n = 0;
   my_n.m = me;
-
-  string file_name = "proposer_log_" + me + ".txt";
-  file.open(file_name.c_str());
-}
-
-proposer::~proposer(){
-  file.close();
 }
 
 void
@@ -175,7 +159,6 @@ proposer::prepare(unsigned instance, std::vector<std::string> &accepts,
          std::vector<std::string> nodes,
          std::string &v)
 {
-  file << "prepare start" << endl;
   // You fill this in for Lab 6
   // Note: if got an "oldinstance" reply, commit the instance using
   // acc->commit(...), and return false.
@@ -186,7 +169,9 @@ proposer::prepare(unsigned instance, std::vector<std::string> &accepts,
   a.instance = instance;
   a.n = my_n;
 
-  prop_t highest_n_a = a.n;
+  prop_t highest_n_a;
+  highest_n_a.n = 0;
+
   v = acc->value(instance);
   for(int i=0; i<nodes.size(); i++){
     std::string node = nodes[i];
@@ -198,13 +183,14 @@ proposer::prepare(unsigned instance, std::vector<std::string> &accepts,
       paxos_protocol::status ret;
       std::string src;
       ret = cl->call(paxos_protocol::preparereq, src, a, r, rpcc::to(1000));
-      
+
       if(ret == paxos_protocol::OK){
 	if(r.oldinstance){
 	  acc->commit(instance, r.v_a);
 	  return false;
 	}else if(r.accept){
 	  accepts.push_back(node);
+
 	  if(r.n_a > highest_n_a){
 	    highest_n_a = r.n_a;
 	    v = r.v_a;
@@ -213,8 +199,6 @@ proposer::prepare(unsigned instance, std::vector<std::string> &accepts,
       }
     }
   }
-  
-  file << "prepare end" << endl;
   return true;
 }
 
@@ -225,7 +209,6 @@ proposer::accept(unsigned instance, std::vector<std::string> &accepts,
         std::vector<std::string> nodes, std::string v)
 {
   //ScopedLock ml(&pxs_mutex);
-  file << "accept start" << endl;
   std::string src;
   paxos_protocol::acceptarg a;
   a.instance = instance;
@@ -248,7 +231,6 @@ proposer::accept(unsigned instance, std::vector<std::string> &accepts,
       }
     }
   }
-  file << "accept end" << endl;
 }
 
 void
@@ -256,8 +238,6 @@ proposer::decide(unsigned instance, std::vector<std::string> accepts,
 	      std::string v)
 {
   //ScopedLock ml(&pxs_mutex);
-  file << "decide start " << endl;
-
   // You fill this in for Lab 6
   paxos_protocol::status ret;
   std::string src;
@@ -304,20 +284,12 @@ acceptor::acceptor(class paxos_change *_cfg, bool _first, std::string _me,
   pxs->reg(paxos_protocol::preparereq, this, &acceptor::preparereq);
   pxs->reg(paxos_protocol::acceptreq, this, &acceptor::acceptreq);
   pxs->reg(paxos_protocol::decidereq, this, &acceptor::decidereq);
-
-  string file_name = "acceptor_log_" + me + ".txt";
-  file.open(file_name.c_str());
-}
-
-acceptor::~acceptor(){
-  file.close();
 }
 
 paxos_protocol::status
 acceptor::preparereq(std::string src, paxos_protocol::preparearg a,
     paxos_protocol::prepareres &r)
 {
-  file << "preparereq start" << endl;
   // You fill this in for Lab 6
   // Remember to initialize *BOTH* r.accept and r.oldinstance appropriately.
   // Remember to *log* the proposal if the proposal is accepted.
@@ -339,7 +311,6 @@ acceptor::preparereq(std::string src, paxos_protocol::preparearg a,
     r.accept = false;
   }
 
-  file << "preparereq end" << endl;
   return paxos_protocol::OK;
 }
 
@@ -347,22 +318,17 @@ acceptor::preparereq(std::string src, paxos_protocol::preparearg a,
 paxos_protocol::status
 acceptor::acceptreq(std::string src, paxos_protocol::acceptarg a, bool &r)
 {
-  file << "acceptreq start" << endl;
-
   // You fill this in for Lab 6
   // Remember to *log* the accept if the proposal is accepted.
   ScopedLock ml(&pxs_mutex);
   if(a.n >= n_h){
     l->logaccept(a.n, a.v);
-    l->logaccept(n_a, v_a);
     n_a = a.n;
     v_a = a.v;
     r = true;
   }else{
     r = false;
   }
-  file << "acceptreq end" << endl; 
-
   return paxos_protocol::OK; 
 }
 
@@ -370,8 +336,6 @@ acceptor::acceptreq(std::string src, paxos_protocol::acceptarg a, bool &r)
 paxos_protocol::status
 acceptor::decidereq(std::string src, paxos_protocol::decidearg a, int &r)
 {
-  file << "decidereq start" << endl;
-
   ScopedLock ml(&pxs_mutex);
   tprintf("decidereq for accepted instance %d (my instance %d) v=%s\n", 
 	 a.instance, instance_h, v_a.c_str());
@@ -386,14 +350,12 @@ acceptor::decidereq(std::string src, paxos_protocol::decidearg a, int &r)
     VERIFY(0);
   }
 
-  file << "decidereq end" << endl;
   return paxos_protocol::OK;
 }
 
 void
 acceptor::commit_wo(unsigned instance, std::string value)
 {
-  file << "commit_wo start" << endl;
   //assume pxs_mutex is held
   tprintf("acceptor::commit: instance=%d has v= %s\n", instance, value.c_str());
 
@@ -411,19 +373,15 @@ acceptor::commit_wo(unsigned instance, std::string value)
       pthread_mutex_unlock(&pxs_mutex);
       cfg->paxos_commit(instance, value);
       pthread_mutex_lock(&pxs_mutex);
-      file << "commit_wo [" << instance << ": " << value << "]" << endl;
     }
   }
-  file << "commit_wo end" << endl;
 }
 
 void
 acceptor::commit(unsigned instance, std::string value)
 {
-  file << "commit start" << endl;
   ScopedLock ml(&pxs_mutex);
   commit_wo(instance, value);
-  file << "commit end" << endl;
 }
 
 std::string

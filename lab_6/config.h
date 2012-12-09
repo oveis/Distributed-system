@@ -52,8 +52,6 @@ class config : public paxos_change {
   void paxos_commit(unsigned instance, std::string v);
   rpcs *get_rpcs() { return acc->get_rpcs(); }
   void breakpoint(int b) { pro->breakpoint(b); }
-  ofstream file;
-  
 };
 
 #endif
